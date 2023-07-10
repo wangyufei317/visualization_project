@@ -1,0 +1,11 @@
+@import './var.scss';
+@import "../mixins/mixins.scss";
+
+// 过度
+.go-transition {
+    transition: all 0.4s;
+}
+
+.go-flex-no-wrap {
+    flex-wrap: nowrap !important;
+  }

@@ -1,0 +1,17 @@
+@import '../common/theme.scss';
+
+@mixin themeify {
+    @each $theme-name, $theme-map in $themes {
+        $theme-map: $theme-map !global;
+        [data-theme='#{$theme-name}'] & {
+            @content;
+        }
+    }
+}
+
+//获取背景颜色
+@mixin fetch-bg-color($target) {
+    @include themeify {
+        background-color: themed($target);
+    }
+}
