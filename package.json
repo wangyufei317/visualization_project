@@ -9,8 +9,11 @@
   },
   "dependencies": {
     "@typescript-eslint/parser": "^5.60.1",
+    "@vicons/carbon": "^0.12.0",
+    "@vicons/ionicons5": "^0.12.0",
     "core-js": "^3.8.3",
     "naive-ui": "^2.34.4",
+    "pinia": "^2.1.3",
     "vue": "^3.2.13",
     "vue-router": "^4.0.3",
     "vuex": "^4.0.0",
@@ -36,5 +39,17 @@
     "sass-loader": "^12.0.0",
     "typescript": "~4.5.5"
   },
-  "repository": "https://github.com/wangyufei317/visualization_project.git"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wangyufei317/visualization_project.git"
+  },
+  "description": "## Project setup ``` yarn install ```",
+  "bugs": {
+    "url": "https://github.com/wangyufei317/visualization_project/issues"
+  },
+  "homepage": "https://github.com/wangyufei317/visualization_project#readme",
+  "main": ".eslintrc.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }

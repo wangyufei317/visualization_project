@@ -15,3 +15,9 @@
         background-color: themed($target);
     }
 }
+//设置边框颜色
+@mixin fetch-border-color($target) {
+    @include themeify {
+      border-color: themed($target);
+    }
+  }

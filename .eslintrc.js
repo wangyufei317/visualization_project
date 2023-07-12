@@ -28,6 +28,10 @@ module.exports = {
     'vue/no-unused-vars': 'off',
     'vue/multi-word-component-names': 'off',
     'vue/valid-template-root': 'off',
-    'vue/no-mutating-props': 'off'
+    'vue/no-mutating-props': 'off',
+    'vue/max-attributes-per-line': 'off',
+    'vue/html-self-closing': 'off',
+    'vue/first-attribute-linebreak': 'off',
+    'vue/html-closing-bracket-newline': 'off'
   }
 }
