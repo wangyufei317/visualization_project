@@ -4,13 +4,15 @@
 // }
 
 const { defineConfig } = require('@vue/cli-service')
+const path = require('path')
+
 module.exports = defineConfig({
   // base: '/',
   // resolve: {
   //   alias: [
   //     {
   //       find: '@',
-  //       replacement: pathResolve('src')
+  //       replacement: path.resolve(__dirname, 'src')
   //     }
   //   ]
   // },

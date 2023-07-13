@@ -1,3 +1,10 @@
+import { excludeParseEventKeyList, excludeParseEventValueList } from '@/enums/eventEnum'
+
+export const evalFn = (fn: string) => {
+  const Fun = Function // 一个变量指向Function，防止前端编译工具报错
+  return new Fun('return ' + fn)()
+}
+
 /**
  * * JSON序列化，支持函数和 undefined
  * @param data
