@@ -1,4 +1,6 @@
 import { excludeParseEventKeyList, excludeParseEventValueList } from '@/enums/eventEnum'
+import { h } from 'vue'
+import { NIcon } from 'naive-ui'
 
 export const evalFn = (fn: string) => {
   const Fun = Function // 一个变量指向Function，防止前端编译工具报错
@@ -53,3 +55,13 @@ export const JSONParse = (data: string) => {
     return v
   })
 }
+
+/**
+ * 生成icon
+ */
+export const renderIcon = (icon: any, set = {}) => h(NIcon, set, { default: () => h(icon) })
+
+/**
+ * 按语言要求生成标签
+ */
+export const renderLang = (lang: string, set = {}, tag = 'span') => h(tag, set, { default: () => window['$t'](lang) })

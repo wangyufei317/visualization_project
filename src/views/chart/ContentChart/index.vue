@@ -10,7 +10,10 @@
 
 <script setup lang="ts">
 import { ContentBox } from '../ContentBox'
-import {} from './'
+import { useAsideHook } from './hooks/useAside.hook'
+
+const { getCharts, BarChartIcon, themeColor, selectOptions, selectValue, clickItemHandle, menuOptions } = useAsideHook()
+
 </script>
 
 <style>

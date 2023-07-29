@@ -10,6 +10,7 @@ const { darkTheme, appTheme, appThemeDetail } = theme
 
 const storageDesign = getLocalStorage(GO_DESIGN_STORE)
 
+// 全局主题store
 export const useDesignStore = defineStore({
   id: 'useDesignStore',
   state: (): DesignStateType =>

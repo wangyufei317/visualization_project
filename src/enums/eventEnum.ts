@@ -18,6 +18,13 @@ export enum EventLife {
   VNODE_BEFORE_MOUNT = 'vnodeBeforeMount'
 }
 
+// 组件交互回调事件
+export enum InteractEvents {
+  INTERACT_ON = 'interactOn',
+  INTERACT_COMPONENT_ID = 'interactComponentId',
+  INTERACT_FN = 'interactFn'
+}
+
 // 内置字符串函数对象列表
 export const excludeParseEventKeyList = [
   EventLife.VNODE_BEFORE_MOUNT,
@@ -35,3 +42,16 @@ export const excludeParseEventValueList = [
   // 请求里的函数语句
   'javascript:'
 ]
+
+// 全局组件交互回调事件触发的类型（当然可以自定义名称）
+export enum InteractEventOn {
+  CLICK = 'click',
+  CHANGE = 'change'
+}
+
+// 交互式组件的触发配置
+export type InteractActionsType = {
+  interactType: InteractEventOn
+  interactName: string
+  componentEmitEvents: { [T: string]: { value: any; label: string }[] }
+}

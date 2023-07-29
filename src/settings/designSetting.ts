@@ -9,3 +9,6 @@ export const theme = {
 
 // 全局边框圆角
 export const borderRadius = '4px'
+
+// 工作区域历史记录存储最大数量
+export const editHistoryMax = 100
