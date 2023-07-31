@@ -4,5 +4,6 @@ import { ChartCategoryEnum } from '@/packages/components/Charts/index.d'
 
 export {
     chartDefaultOptionByType,
-    ChartCategoryEnum
+    ChartCategoryEnum,
+    
 }
