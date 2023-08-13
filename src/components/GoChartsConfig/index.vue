@@ -4,7 +4,7 @@
 <script lang="ts" setup>
 import * as monaco from 'monaco-editor'
 import { editor } from 'monaco-editor/esm/vs/editor/editor.api.d'
-import { onMounted, PropType, reactive, ref } from 'vue'
+import { onMounted, PropType, reactive, ref, watch } from 'vue'
 import { ChartCategoryEnum, chartDefaultOptionByType } from '.'
 import { debounce } from 'lodash';
 
@@ -35,6 +35,9 @@ const editRef = ref()
  */
 const init = () => {
     if (monacoEditor.value) {
+        if (props.code !== monacoEditor.value.getValue()) {
+            monacoEditor.value.getModel()?.setValue(props.code)
+        }
         return
     }
     monacoEditor.value = monaco.editor.create(editRef.value, {
@@ -76,4 +79,6 @@ const changeValue = () => {
 onMounted(() => {
     init();
 })
+
+watch(() => props.code, () => init())
 </script>

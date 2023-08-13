@@ -65,3 +65,11 @@ export const renderIcon = (icon: any, set = {}) => h(NIcon, set, { default: () =
  * 按语言要求生成标签
  */
 export const renderLang = (lang: string, set = {}, tag = 'span') => h(tag, set, { default: () => window['$t'](lang) })
+
+/**
+ * * 生成一个不重复的ID
+ * @param { Number } randomLength
+ */
+export const getUUID = (randomLength = 10) => {
+  return Number(Math.random().toString().substring(2, randomLength) + Date.now()).toString(36)
+}

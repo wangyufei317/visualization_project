@@ -42,6 +42,17 @@ export interface StatusType {
     hide: boolean
 }
 
+export enum ChartFrameEnum {
+    // 支持 dataset 的 echarts 框架
+    ECHARTS = 'echarts',
+    // UI 组件框架
+    NAIVE_UI = 'naiveUI',
+    // 自定义带数据组件
+    COMMON = 'common',
+    // 无数据变更
+    STATIC = 'static'
+  }
+
 // 组件配置
 export type ConfigType = {
     // 组件 key

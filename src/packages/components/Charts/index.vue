@@ -4,15 +4,10 @@
 <script setup lang="ts">
     import * as echarts from 'echarts'
     import { ref, onMounted, PropType } from 'vue'
-    import { ChartCategoryEnum } from './index.d'
-
-    const chartRef = ref()
-
-    const initChart = () => {
-        const myChart = echarts.init(chartRef.value)
-        myChart.setOption()
-    }
-    onMounted(() => initChart())
+    import { ChartCategoryEnum } from '.'
+    import merge from 'lodash/merge'
+    import Config from './config'
+    import { useCanvasInitOptions } from '@/hooks/useCanvasInitOptions.hook'
 
     const props = defineProps({
         themeSetting: {
@@ -29,8 +24,21 @@
             required: true,
         },
         chartConfig: {
-            type: Object as PropType<config>,
+            type: Object as PropType<Config>,
             required: true
         }
     })
+
+    const chartRef = ref()
+
+    const initChart = (option: any) => {
+        const myChart = echarts.init(chartRef.value)
+        myChart.setOption(option)
+    }
+    onMounted(() => {
+        const initOptions = useCanvasInitOptions(props.chartConfig.option, props.themeSetting)
+        const option = merge({}, props.chartConfig.option, props.themeSetting)
+        initChart(option)
+    })
+
 </script>

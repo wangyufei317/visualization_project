@@ -5,7 +5,7 @@ import pieOption from './pie.json'
 import radarOption from './radar.json'
 import scatterOption from './scatter.json'
 import moreOption from './more.json'
-import { ChartCategoryEnum } from '../index.d'
+import { ChartCategoryEnum } from '..'
 
 const options = {
     [ChartCategoryEnum.BAR]: barOption,
